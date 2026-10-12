@@ -1,0 +1,70 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build libprotobuf-dev protobuf-compiler libfmt-dev libspdlog-dev libeigen3-dev libcli11-dev
+
+      - name: Configure
+        run: cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DFORGE_BUILD_TESTS=OFF
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Prepare
+        run: |
+          VERSION="${GITHUB_REF_NAME}"
+          OUT="forge-${VERSION}-aarch64-linux"
+          cp build/forge "$OUT"
+          chmod +x "$OUT"
+          sha256sum "$OUT" > "${OUT}.sha256"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forge-aarch64
+          path: |
+            forge-*-linux
+            forge-*-linux.sha256
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: SHA256SUMS
+        run: |
+          cd artifacts
+          sha256sum forge-*-linux > SHA256SUMS
+          cat SHA256SUMS
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/forge-*-linux
+            artifacts/SHA256SUMS
+          generate_release_notes: true
+          prerelease: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
