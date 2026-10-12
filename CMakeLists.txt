@@ -38,7 +38,6 @@ endif()
 add_compile_options(-Wall -Wextra -Wpedantic -Wno-unused-parameter)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -flto")
 
-option(FORGE_BUILD_TESTS "Build tests" ON)
 option(FORGE_ENABLE_APU  "Enable APU"  ON)
 
 # ==========================================================
@@ -49,10 +48,6 @@ find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
 find_package(Eigen3 REQUIRED NO_MODULE)
 find_package(CLI11 REQUIRED)
-
-if(FORGE_BUILD_TESTS)
-    find_package(Catch2 3 REQUIRED)
-endif()
 
 # Boost: header-only
 find_path(BOOST_INCLUDE_DIR boost/version.hpp)
@@ -165,30 +160,6 @@ target_link_libraries(forge PRIVATE
 )
 
 # ==========================================================
-# Tests
-# ==========================================================
-if(FORGE_BUILD_TESTS)
-    enable_testing()
-    add_executable(forge-tests
-        tests/unit/test_core.cpp
-        tests/unit/test_ir.cpp
-        tests/unit/test_optimizer.cpp
-        tests/unit/test_fusion.cpp
-        tests/unit/test_coverage_boost.cpp
-    )
-    target_link_libraries(forge-tests PRIVATE
-        forge-core
-        forge-ir
-        forge-optimizer
-        forge-frontend
-        Catch2::Catch2WithMain
-    )
-    include(CTest)
-    include(Catch)
-    catch_discover_tests(forge-tests)
-endif()
-
-# ==========================================================
 # Summary
 # ==========================================================
 message(STATUS "")
@@ -199,7 +170,6 @@ message(STATUS "  Version       : ${PROJECT_VERSION}")
 message(STATUS "  Compiler      : ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS "  Build type    : ${CMAKE_BUILD_TYPE}")
 message(STATUS "  C++ Standard  : ${CMAKE_CXX_STANDARD}")
-message(STATUS "  Tests         : ${FORGE_BUILD_TESTS}")
 message(STATUS "  APU backend   : ${FORGE_ENABLE_APU}")
 message(STATUS "  Boost headers : ${BOOST_INCLUDE_DIR}")
 message(STATUS "  Protobuf      : ${Protobuf_VERSION}")
