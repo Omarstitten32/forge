@@ -50,4 +50,15 @@ std::string Shape::to_string() const {
     return os.str();
 }
 
+std::string Tensor::summary() const {
+    std::ostringstream os;
+    os << name() << " : " << dtype_name(dtype()) << " " << shape().to_string();
+    if (has_data()) {
+        os << " (" << byte_size() << " bytes)";
+    } else {
+        os << " (no data)";
+    }
+    return os.str();
+}
+
 } // namespace forge::ir

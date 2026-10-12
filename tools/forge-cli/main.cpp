@@ -1,13 +1,12 @@
 #include "forge/core/log.hpp"
-#include <spdlog/spdlog.h>
 #include "forge/core/error.hpp"
 #include "forge/frontend/onnx_parser.hpp"
 #include "forge/optimizer/optimizer.hpp"
 #include "forge/codegen/codegen.hpp"
 
 #include <CLI/CLI.hpp>
-#include <fstream>
-#include <string>
+#include <spdlog/spdlog.h>
+#include <iomanip>
 
 int main(int argc, char** argv) {
     forge::init_logging();
@@ -19,8 +18,7 @@ int main(int argc, char** argv) {
     std::string output;
     std::string backend = "neon";
 
-    app.add_option("input", input, "Input model file (.onnx)")
-        ->required();
+    app.add_option("input", input, "Input model file (.onnx)")->required();
     app.add_option("-o,--output", output, "Output file");
     app.add_option("-b,--backend", backend, "Backend: neon|sve|apu|vulkan")
         ->check(CLI::IsMember({"neon", "sve", "apu", "vulkan"}));
@@ -30,12 +28,40 @@ int main(int argc, char** argv) {
     spdlog::info("Forge v0.1.0");
     spdlog::info("Input:   {}", input);
     spdlog::info("Backend: {}", backend);
+    spdlog::info("");
 
     try {
-        auto graph = forge::frontend::parse_onnx(input);
-        spdlog::info("{}", graph.summary());
+        auto result = forge::frontend::parse_onnx(input);
+        const auto& m = result.metadata;
 
-        auto stats = forge::optimizer::optimize(graph);
+        // Metadata report
+        spdlog::info("═══════ ONNX Metadata ═══════");
+        spdlog::info("  Producer   : {} {}", m.producer_name, m.producer_version);
+        spdlog::info("  IR version : {}", m.ir_version);
+        spdlog::info("  Opset      : {}", m.opset_version);
+        spdlog::info("  Nodes      : {}", m.node_count);
+        spdlog::info("  Initializers: {}", m.initializer_count);
+        spdlog::info("  Inputs     : {}", m.input_count);
+        spdlog::info("  Outputs    : {}", m.output_count);
+        spdlog::info("");
+
+        spdlog::info("═══════ IR Graph ═══════");
+        spdlog::info("  {}", result.graph.summary());
+
+        // Show first few tensors with data
+        std::size_t shown = 0;
+        for (const auto& t : result.graph.tensors()) {
+            if (t.has_data() && shown < 5) {
+                spdlog::info("    - {}", t.summary());
+                ++shown;
+            }
+        }
+        if (shown == 0) {
+            spdlog::info("    (no tensors with data)");
+        }
+        spdlog::info("");
+
+        auto stats = forge::optimizer::optimize(result.graph);
         spdlog::info("Optimization: {} -> {} nodes",
                      stats.nodes_before, stats.nodes_after);
 
@@ -44,8 +70,8 @@ int main(int argc, char** argv) {
         else if (backend == "apu")    backend_enum = forge::codegen::Backend::APU;
         else if (backend == "vulkan") backend_enum = forge::codegen::Backend::Vulkan;
 
-        auto code = forge::codegen::generate(graph, backend_enum);
-        spdlog::info("Generated {} bytes", code.size());
+        auto code = forge::codegen::generate(result.graph, backend_enum);
+        spdlog::info("Generated {} bytes of code", code.size());
 
         if (!output.empty()) {
             std::ofstream out(output);

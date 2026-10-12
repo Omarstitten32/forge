@@ -47,3 +47,63 @@ TEST_CASE("Graph tensor management", "[ir]") {
     REQUIRE(g.tensor(id)->name == "input");
     REQUIRE(g.tensor(id)->shape.total_elements() == 150528);
 }
+
+TEST_CASE("Tensor can hold raw data", "[ir][tensor]") {
+    TensorInfo info;
+    info.name  = "weights";
+    info.dtype = DataType::F32;
+    info.shape = Shape({2, 3});
+
+    std::vector<std::uint8_t> data(2 * 3 * 4, 0);  // 6 floats = 24 bytes
+    Tensor t(info, std::move(data));
+
+    REQUIRE(t.has_data());
+    REQUIRE(t.byte_size() == 24);
+    REQUIRE(t.element_count() == 6);
+    REQUIRE(t.name() == "weights");
+}
+
+TEST_CASE("Graph can store tensor with data", "[ir][graph]") {
+    Graph g;
+    TensorInfo info;
+    info.name  = "w1";
+    info.dtype = DataType::F32;
+    info.shape = Shape({4});
+
+    std::vector<std::uint8_t> data(16, 0);
+    Tensor t(info, std::move(data));
+
+    auto id = g.add_tensor(std::move(t));
+    REQUIRE(g.tensor_count() == 1);
+    REQUIRE(g.tensor_data(id)->has_data());
+    REQUIRE(g.tensor_data(id)->byte_size() == 16);
+}
+
+TEST_CASE("Graph find_tensor by name", "[ir][graph]") {
+    Graph g;
+    TensorInfo info1; info1.name = "alpha";
+    TensorInfo info2; info2.name = "beta";
+    g.add_tensor(info1);
+    g.add_tensor(info2);
+
+    auto a = g.find_tensor("alpha");
+    auto b = g.find_tensor("beta");
+    auto c = g.find_tensor("gamma");
+
+    REQUIRE(a == 0);
+    REQUIRE(b == 1);
+    REQUIRE(c == UINT32_MAX);
+}
+
+TEST_CASE("Graph remove_dead_nodes compacts", "[ir][graph]") {
+    Graph g;
+    auto id1 = g.add_node(OpType::Conv2D, "keep");
+    auto id2 = g.add_node(OpType::Relu,   "remove");
+    REQUIRE(g.node_count() == 2);
+
+    g.mark_node_dead(id2);
+    g.remove_dead_nodes();
+
+    REQUIRE(g.node_count() == 1);
+    REQUIRE(g.node(0)->name == "keep");
+}
