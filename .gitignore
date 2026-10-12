@@ -1,12 +1,55 @@
+# Build artifacts
 /build/
 /out/
 cmake-build-*/
+
+# IDE
 .vscode/
 .idea/
 *.swp
+*.swo
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
 *.log
+
+# Test outputs
 /Testing/
+
+# Compiled
 *.o
 *.a
 *.so
+*.dylib
+
+# CMake
+compile_commands.json
+
+# ==========================================================
+# Model files (too large for git)
+# ==========================================================
+test_data/*.onnx
+test_data/*.pb
+test_data/*.tflite
+test_data/*.gguf
+test_data/*.pt
+test_data/*.safetensors
+
+# But keep scripts and .gitkeep
+!test_data/*.py
+!test_data/.gitkeep
+
+# Large binary artifacts
+*.bin
+*.weights
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary
+*.tmp
+*.bak
