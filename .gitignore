@@ -1,0 +1,12 @@
+/build/
+/out/
+cmake-build-*/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+*.log
+/Testing/
+*.o
+*.a
+*.so
