@@ -259,16 +259,19 @@ OnnxParseResult parse_onnx_bytes(const std::vector<std::uint8_t>& data) {
         return id;
     };
 
-    // 1. Register graph inputs
-    for (int i = 0; i < g.input_size(); ++i) {
-        register_info(extract_tensor_info(g.input(i)));
-    }
-
-    // 2. Register initializers WITH DATA
+    // 1. Register initializers WITH DATA FIRST
+    //    (Opset 7 lists weights as inputs — initializers must win)
     for (int i = 0; i < g.initializer_size(); ++i) {
         auto t = extract_initializer_tensor(g.initializer(i));
         if (tensor_ids.count(t.name())) continue;
         register_tensor(std::move(t));
+    }
+
+    // 2. Register graph inputs (metadata only, skip if already registered)
+    for (int i = 0; i < g.input_size(); ++i) {
+        auto info = extract_tensor_info(g.input(i));
+        if (tensor_ids.count(info.name)) continue;
+        register_info(std::move(info));
     }
 
     // 3. Register graph outputs
