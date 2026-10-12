@@ -1,5 +1,6 @@
 #include "forge/optimizer/optimizer.hpp"
 #include "forge/optimizer/evaluate.hpp"
+#include "forge/optimizer/fusion.hpp"
 #include "forge/core/log.hpp"
 
 #include <spdlog/spdlog.h>
@@ -12,21 +13,18 @@ namespace forge::optimizer {
 // ==========================================================
 std::size_t pass_constant_folding(ir::Graph& graph) {
     std::size_t folded = 0;
-
-    // Iterate repeatedly until no more folding possible.
     bool changed = true;
+
     while (changed) {
         changed = false;
-
         auto topo = topological_sort(graph);
+
         for (auto node_id : topo) {
             auto* node = graph.node(node_id);
             if (!node) continue;
-
-            // Skip nodes already constant
             if (node->op == ir::OpType::Constant) continue;
+            if (is_fused(node->op)) continue;
 
-            // Gather input tensors
             std::vector<const ir::Tensor*> inputs;
             inputs.reserve(node->inputs.size());
 
@@ -37,8 +35,6 @@ std::size_t pass_constant_folding(ir::Graph& graph) {
                 inputs.push_back(t);
             }
             if (!all_const || inputs.empty()) continue;
-
-            // Try to evaluate
             if (node->outputs.empty()) continue;
 
             auto out_tid = node->outputs.front();
@@ -48,13 +44,10 @@ std::size_t pass_constant_folding(ir::Graph& graph) {
             auto result = try_evaluate(*node, inputs, *out_info);
             if (!result.has_value()) continue;
 
-            // Replace output tensor with computed constant
             *graph.tensor_data(out_tid) = std::move(*result);
 
-            // Convert node to a Constant — it now just forwards its input
             node->op = ir::OpType::Constant;
             node->inputs.clear();
-            // Keep the same output
 
             ++folded;
             changed = true;
@@ -78,10 +71,7 @@ std::size_t pass_dead_code_elimination(ir::Graph& graph) {
             ++removed;
         }
     }
-
-    if (removed > 0) {
-        graph.remove_dead_nodes();
-    }
+    if (removed > 0) graph.remove_dead_nodes();
     return removed;
 }
 
@@ -94,18 +84,28 @@ OptimizationStats optimize(ir::Graph& graph) {
 
     spdlog::debug("[optimizer] start: {} nodes", stats.nodes_before);
 
-    // Pass 1: constant folding (may expose new dead code)
+    // 1. Operator fusion (creates fused ops)
+    auto fusion_stats = pass_operator_fusion(graph);
+    stats.operators_fused = fusion_stats.total_fusions;
+
+    // Compact dead nodes after fusion
+    if (stats.operators_fused > 0) {
+        graph.remove_dead_nodes();
+    }
+
+    // 2. Constant folding
     stats.constants_folded = pass_constant_folding(graph);
 
-    // Pass 2: DCE
+    // 3. DCE
     stats.dead_nodes_removed = pass_dead_code_elimination(graph);
 
     stats.nodes_after = graph.node_count();
     stats.nodes_eliminated = stats.nodes_before - stats.nodes_after;
 
-    spdlog::debug("[optimizer] done: {} nodes (folded={}, dce={})",
+    spdlog::debug("[optimizer] done: {} nodes (folded={}, fused={}, dce={})",
                   stats.nodes_after,
                   stats.constants_folded,
+                  stats.operators_fused,
                   stats.dead_nodes_removed);
 
     return stats;

@@ -25,8 +25,28 @@ const char* op_name(OpType op) {
         case OpType::Concat:    return "Concat";
         case OpType::Constant:  return "Constant";
         case OpType::Unknown:   return "Unknown";
+
+        // Fused
+        case OpType::Conv2DRelu:        return "Conv2DRelu";
+        case OpType::Conv2DBatchNorm:   return "Conv2DBatchNorm";
+        case OpType::Conv2DBatchNormRelu:return "Conv2DBatchNormRelu";
+        case OpType::AddRelu:           return "AddRelu";
+        case OpType::MulAdd:            return "MulAdd";
     }
     return "Unknown";
+}
+
+bool is_fused(OpType op) {
+    switch (op) {
+        case OpType::Conv2DRelu:
+        case OpType::Conv2DBatchNorm:
+        case OpType::Conv2DBatchNormRelu:
+        case OpType::AddRelu:
+        case OpType::MulAdd:
+            return true;
+        default:
+            return false;
+    }
 }
 
 } // namespace forge::ir

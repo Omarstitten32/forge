@@ -110,6 +110,7 @@ add_library(forge-optimizer STATIC
     src/optimizer/optimizer.cpp
     src/optimizer/analysis.cpp
     src/optimizer/evaluate.cpp
+    src/optimizer/fusion.cpp
 )
 target_include_directories(forge-optimizer PUBLIC include)
 target_link_libraries(forge-optimizer PUBLIC forge-ir)
@@ -155,6 +156,7 @@ if(FORGE_BUILD_TESTS)
         tests/unit/test_core.cpp
         tests/unit/test_ir.cpp
         tests/unit/test_optimizer.cpp
+        tests/unit/test_fusion.cpp
     )
     target_link_libraries(forge-tests PRIVATE
         forge-core
