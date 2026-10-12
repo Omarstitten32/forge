@@ -53,3 +53,34 @@ __pycache__/
 # Temporary
 *.tmp
 *.bak
+
+# Build directories (all variants)
+build-*/
+/build/
+build-asan/
+build-debug/
+build-coverage/
+
+# CMake caches
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+
+# CTest
+CTestTestfile.cmake
+DartConfiguration.tcl
+
+# Coverage data
+*.gcda
+*.gcno
+*.gcov
+coverage.info
+coverage_filtered.info
+
+# Generated proto C++ files (from proto-gen)
+/proto-gen/

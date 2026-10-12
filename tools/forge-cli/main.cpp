@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     forge::init_logging();
 
     CLI::App app{"Forge - AI model compiler for ARM64"};
-    app.set_version_flag("--version", "0.1.0");
+    app.set_version_flag("--version", "Forge v0.1.0 (aarch64)");
 
     std::string input;
     std::string output;

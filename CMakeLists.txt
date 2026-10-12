@@ -14,6 +14,23 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# ==========================================================
+# Static stdlib: OFF by default (increases size when
+# dependents like protobuf/spdlog are still dynamic)
+# ==========================================================
+option(FORGE_STATIC_STDLIB "Statically link libstdc++/libgcc" OFF)
+if(FORGE_STATIC_STDLIB AND UNIX AND NOT APPLE)
+    add_link_options(-static-libgcc -static-libstdc++)
+endif()
+
+# ==========================================================
+# Strip symbols in Release builds (safe, always beneficial)
+# ==========================================================
+option(FORGE_STRIP_BINARY "Strip binary in Release" ON)
+if(FORGE_STRIP_BINARY AND CMAKE_BUILD_TYPE STREQUAL "Release")
+    add_link_options(-s)
+endif()
+
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
 endif()
