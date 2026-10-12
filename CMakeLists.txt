@@ -174,6 +174,7 @@ if(FORGE_BUILD_TESTS)
         tests/unit/test_ir.cpp
         tests/unit/test_optimizer.cpp
         tests/unit/test_fusion.cpp
+        tests/unit/test_coverage_boost.cpp
     )
     target_link_libraries(forge-tests PRIVATE
         forge-core
