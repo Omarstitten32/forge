@@ -1,8 +1,0 @@
-truncated-50 exit: 1
-truncated-50 stdout_bytes: 283
-truncated-100 exit: 1
-header-garbage exit: 1
-zero exit: 1
-random-14mb exit: 1
-random-14mb stdout_bytes: 282
-nonexistent exit: 1

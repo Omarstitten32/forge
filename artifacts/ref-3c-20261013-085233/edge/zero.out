@@ -1,5 +1,0 @@
-[08:52:42.663] [info] Forge v0.1.0
-[08:52:42.663] [info] Input:   /root/forge/artifacts/ref-3c-20261013-085233/edge/zero.onnx
-[08:52:42.663] [info] Backend: neon
-[08:52:42.663] [info] 
-[08:52:42.663] [error] ParseError: File is empty: /root/forge/artifacts/ref-3c-20261013-085233/edge/zero.onnx

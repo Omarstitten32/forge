@@ -1,5 +1,0 @@
-[08:52:42.806] [info] Forge v0.1.0
-[08:52:42.806] [info] Input:   /root/forge/artifacts/ref-3c-20261013-085233/edge/random-14mb.onnx
-[08:52:42.806] [info] Backend: neon
-[08:52:42.806] [info] 
-[08:52:42.824] [error] ParseError: Failed to deserialize ONNX ModelProto (invalid binary)

@@ -1,5 +1,0 @@
-[00:14:17.908] [info] Forge v0.1.0
-[00:14:17.909] [info] Input:   /nonexistent-xyz.onnx
-[00:14:17.909] [info] Backend: neon
-[00:14:17.909] [info] 
-[00:14:17.909] [error] ParseError: Cannot open file: /nonexistent-xyz.onnx
