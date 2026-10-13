@@ -1,0 +1,6 @@
+[08:52:42.652] [info] Forge v0.1.0
+[08:52:42.652] [info] Input:   /root/forge/artifacts/ref-3c-20261013-085233/edge/header-garbage.onnx
+[08:52:42.652] [info] Backend: neon
+[08:52:42.652] [info] 
+[libprotobuf ERROR google/protobuf/wire_format_lite.cc:618] String field contains invalid UTF-8 data when parsing a protocol buffer. Use the 'bytes' type if you intend to send raw bytes. 
+[08:52:42.652] [error] ParseError: Failed to deserialize ONNX ModelProto (invalid binary)

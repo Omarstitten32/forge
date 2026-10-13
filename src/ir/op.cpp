@@ -23,6 +23,7 @@ const char* op_name(OpType op) {
         case OpType::Reshape:   return "Reshape";
         case OpType::Transpose: return "Transpose";
         case OpType::Concat:    return "Concat";
+        case OpType::Flatten:   return "Flatten";
         case OpType::Constant:  return "Constant";
         case OpType::Unknown:   return "Unknown";
 

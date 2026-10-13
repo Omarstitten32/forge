@@ -1,0 +1,10 @@
+=== per-file: LOC, functions, classes ===
+  src/frontend/onnx_parser.cpp                338 LOC    9 funcs
+  src/codegen/codegen.cpp                      46 LOC    2 funcs
+  src/codegen/kernels.cpp                     217 LOC    0 funcs
+  src/optimizer/evaluate.cpp                  161 LOC    7 funcs
+  src/optimizer/fusion.cpp                    304 LOC    7 funcs
+  tools/forge-cli/main.cpp                    159 LOC    1 funcs
+
+=== all 'TODO' / 'FIXME' / 'STUB' / 'Not implemented' in source ===
+src/codegen/codegen.cpp:27:    out += "// Forge v0.1.0 — Code Generation STUB\n";

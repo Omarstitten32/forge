@@ -62,6 +62,9 @@ public:
     DataType dtype()          const { return info_.dtype; }
     const Shape& shape()      const { return info_.shape; }
 
+    /// Replace metadata (used by shape inference). Does not touch data.
+    void set_info(TensorInfo info) { info_ = std::move(info); }
+
     // ---- Data ----
     bool has_data() const { return !data_.empty(); }
     std::size_t byte_size() const { return data_.size(); }

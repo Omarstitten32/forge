@@ -95,6 +95,7 @@ add_library(forge-ir STATIC
     src/ir/graph.cpp
     src/ir/tensor.cpp
     src/ir/op.cpp
+    src/ir/shape_infer.cpp
 )
 target_include_directories(forge-ir PUBLIC include)
 target_link_libraries(forge-ir PUBLIC forge-core Eigen3::Eigen)
@@ -132,6 +133,7 @@ target_link_libraries(forge-optimizer PUBLIC forge-ir)
 # ==========================================================
 add_library(forge-codegen STATIC
     src/codegen/codegen.cpp
+    src/codegen/kernels.cpp
 )
 target_include_directories(forge-codegen PUBLIC include)
 target_link_libraries(forge-codegen PUBLIC forge-ir)

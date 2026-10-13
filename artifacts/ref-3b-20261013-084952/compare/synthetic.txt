@@ -1,0 +1,11 @@
+CASE       REF_N   FRG_N   REF_I   FRG_I   EXIT   RESULT
+----------------------------------------------------------------------
+relu       1       1       0       0       0      OK
+add        1       1       1       1       0      OK
+conv       1       1       2       2       0      OK
+chain      3       3       3       3       0      OK
+opset99    1       1       0       0       0      OK
+gemm       1       1       2       2       0      OK
+maxpool    1       1       0       0       0      OK
+
+matched: 7/7

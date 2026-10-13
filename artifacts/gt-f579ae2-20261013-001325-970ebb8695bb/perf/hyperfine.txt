@@ -1,0 +1,8 @@
+Benchmark 1: /root/forge/build-truth/forge /root/external_test/test_model.onnx
+  Time (mean ± σ):       7.2 ms ±   2.4 ms    [User: 2.2 ms, System: 3.4 ms]
+  Range (min … max):     4.6 ms …  17.8 ms    200 runs
+ 
+== GOVERNOR AFTER ==
+cpu0: sugov_ext
+cpu4: performance
+cpu7: performance

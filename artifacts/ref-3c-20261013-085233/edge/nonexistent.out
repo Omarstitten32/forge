@@ -1,0 +1,5 @@
+[08:52:42.859] [info] Forge v0.1.0
+[08:52:42.859] [info] Input:   /nonexistent-xyz-stage-3c.onnx
+[08:52:42.859] [info] Backend: neon
+[08:52:42.859] [info] 
+[08:52:42.859] [error] ParseError: Cannot open file: /nonexistent-xyz-stage-3c.onnx

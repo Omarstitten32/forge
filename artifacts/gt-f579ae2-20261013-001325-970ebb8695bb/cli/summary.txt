@@ -1,0 +1,78 @@
+== version ==
+exit:        0
+stdout_size: 23
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== help ==
+exit:        0
+stdout_size: 994
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== noargs ==
+exit:        106
+stdout_size: 0
+stderr_size: 56
+unique_out:  1 (1 = deterministic)
+
+== nonexistent ==
+exit:        1
+stdout_size: 222
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== empty ==
+exit:        1
+stdout_size: 329
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== random ==
+exit:        1
+stdout_size: 293
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== directory ==
+exit:        1
+stdout_size: 328
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== valid_default ==
+exit:        0
+stdout_size: 1062
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== backend_neon ==
+exit:        0
+stdout_size: 1062
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== backend_sve ==
+exit:        0
+stdout_size: 1061
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== backend_apu ==
+exit:        0
+stdout_size: 1061
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== backend_vulkan ==
+exit:        0
+stdout_size: 1064
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+
+== verify_tensors ==
+exit:        0
+stdout_size: 1557
+stderr_size: 0
+unique_out:  1 (1 = deterministic)
+

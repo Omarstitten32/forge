@@ -1,0 +1,18 @@
+FIELD          REFERENCE    FORGE        RESULT
+----------------------------------------------------
+ir_version     10           10           OK
+opset          17           17           OK
+nodes          5            5            OK
+inits          4            4            OK
+inputs         1            1            OK
+outputs        1            1            OK
+
+matched: 6/6
+
+INITIALIZER BYTE-LEVEL COMPARISON
+NAME       REF_DIMS       REF_BYTES  FORGE_BYTES  RESULT
+----------------------------------------------------------------------
+conv_w     8,3,3,3        0          864          DIVERGENCE
+conv_b     8              0          32           DIVERGENCE
+gemm_w     1800,10        0          72000        DIVERGENCE
+gemm_b     10             0          40           DIVERGENCE

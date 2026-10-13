@@ -1,0 +1,6531 @@
+{
+  "graph": {
+    "initializer_count": 267,
+    "input_count": 268,
+    "name": "main",
+    "node_count": 155,
+    "output_count": 1,
+    "value_info_count": 0
+  },
+  "initializers": [
+    {
+      "bytes": 3456,
+      "dims": [
+        32,
+        3,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 864,
+      "fnv1a": "2491e88cced55e01",
+      "name": "mobilenetv20_features_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "2debc76bf6326449"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "0862e55b8919db5c",
+      "name": "mobilenetv20_features_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "5f8d65cb1726311a"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "96ca1f091bdf3f17",
+      "name": "mobilenetv20_features_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "40aaee1cdaf9777d"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "a068f9f0de50b36c",
+      "name": "mobilenetv20_features_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "4ae1284d8371e987"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "00550e188ac84364",
+      "name": "mobilenetv20_features_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "72ffc0bdef54fa71"
+    },
+    {
+      "bytes": 4096,
+      "dims": [
+        32,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 1024,
+      "fnv1a": "bef46e4ea5531672",
+      "name": "mobilenetv20_features_linearbottleneck0_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "bcf2210a1ac52d46"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "467ab748cbc5486c",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "bb18b316a547d7da"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "a378712e226b7a56",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "1b991113d601d7f2"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "c9127eb95a151ae9",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "ff28dfca651315a2"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "6c1e01f426073b47",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "7ce5a70a2cad2c82"
+    },
+    {
+      "bytes": 1152,
+      "dims": [
+        32,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 288,
+      "fnv1a": "1bfef906cd122baa",
+      "name": "mobilenetv20_features_linearbottleneck0_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "ae65d113400778f6"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "ced7a7c1b85294f2",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "4854cae054a13767"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "5ec31ee6663c1716",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "8caf6345edac2a29"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "b3f9a90fe49de390",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "92176e989b66eb63"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "61f9fe4147114569",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "a3ebf3a311df5b7e"
+    },
+    {
+      "bytes": 2048,
+      "dims": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 512,
+      "fnv1a": "3280bf6e6db655dd",
+      "name": "mobilenetv20_features_linearbottleneck0_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "1ef93814ab581193"
+    },
+    {
+      "bytes": 64,
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "elem_count": 16,
+      "fnv1a": "5d32c59248ce4c81",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "84024f70c5fe7300"
+    },
+    {
+      "bytes": 64,
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "elem_count": 16,
+      "fnv1a": "d42d0c03241ff81b",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "4a065848a78abd1f"
+    },
+    {
+      "bytes": 64,
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "elem_count": 16,
+      "fnv1a": "077ae941b92ebe7f",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "15ecf16561d08476"
+    },
+    {
+      "bytes": 64,
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "elem_count": 16,
+      "fnv1a": "f3b3aeb9252ffd72",
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "cefd624875df8771"
+    },
+    {
+      "bytes": 6144,
+      "dims": [
+        96,
+        16,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 1536,
+      "fnv1a": "c7c6eb1c17c73775",
+      "name": "mobilenetv20_features_linearbottleneck1_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "ebc52f8bd6d0c92e"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "e8a4525595e86be1",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "38019cf83ac11af8"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "7859e39643a6ea6b",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "160964f6c387b37f"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "dbc997665113b933",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "a9c057e37a1d78b3"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "33577dd01ae3b1ca",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "df99f13b75ad19d2"
+    },
+    {
+      "bytes": 3456,
+      "dims": [
+        96,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 864,
+      "fnv1a": "b3d83d8d7493d076",
+      "name": "mobilenetv20_features_linearbottleneck1_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "4397265b13be3cc4"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "741e163dc32f1f7f",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "d02017714b267312"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "71d7bc2bfa6c0ff8",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "d40820b0afe9e7ac"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "de7361258b9de1aa",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "52d4097b4c5d91fc"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "d7d47d5ae54f2306",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "643733f2918b6ed5"
+    },
+    {
+      "bytes": 9216,
+      "dims": [
+        24,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 2304,
+      "fnv1a": "ecc899e42582f862",
+      "name": "mobilenetv20_features_linearbottleneck1_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "a19d08f3a238786b"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "f11162a5aee66d00",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "7052aaee8bc32462"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "1e09e9429c774496",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "a37487441f9b9439"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "66ccebcaedd5a0f2",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "3253a3260d9cd77c"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "f418ea4bbcd56b37",
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "0797f1d698855ad6"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        144,
+        24,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "4b06d3e3f2482610",
+      "name": "mobilenetv20_features_linearbottleneck2_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "466fc4df0485fe27"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "152774600e337da9",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "bcad948dcda08dc2"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "857bf774d30a99f3",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "8216089050af02c7"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "f4659ccb4c9529e2",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "2216d45977854565"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "8dbbb9c0f3cb81bf",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "37c41ac07132d479"
+    },
+    {
+      "bytes": 5184,
+      "dims": [
+        144,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 1296,
+      "fnv1a": "7df1806fda42ed39",
+      "name": "mobilenetv20_features_linearbottleneck2_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "96113206e9787d7c"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "19bfee521671decd",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "828fde34c097dcbb"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "ca0af7da05685cdb",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "6b0552a0d836fd1c"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "774b0796b0009478",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "b087172c287e08b0"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "e707562a8081d690",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "80b4036c3ac6af7e"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        24,
+        144,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "867b2aa0d8ef65fc",
+      "name": "mobilenetv20_features_linearbottleneck2_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "57f6e2942bb88e19"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "4b7230e47ca92dca",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "ecec3c8c21e77e5b"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "9790cb8f0bb8b27d",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "89312a48724ebda1"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "55fc77f6cd41d830",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "ab5e665a58405c99"
+    },
+    {
+      "bytes": 96,
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "elem_count": 24,
+      "fnv1a": "9e05dbd12669f5c3",
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "f8ba9485b2db3647"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        144,
+        24,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "31fc9105dceea1c7",
+      "name": "mobilenetv20_features_linearbottleneck3_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "b2026aad8f6f6113"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "860a3b8428ecc4a8",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "8546c1927f586ebe"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "8c22d3b551b2730a",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "0f0d863f946b6ffb"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "f22e7614799b2f0d",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "f4e9d4a5267c07fb"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "1391123c86e7f14f",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "bf9a50fe3163acc7"
+    },
+    {
+      "bytes": 5184,
+      "dims": [
+        144,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 1296,
+      "fnv1a": "3a8cdf83b389d88d",
+      "name": "mobilenetv20_features_linearbottleneck3_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "779264e75e9ee3f5"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "a388f03f586d6b63",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "9bd79c0cbc1f2f51"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "3e7ed11a9820ae3e",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "709e7d005ef5b387"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "33bb3994dea9f5f8",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "386c5f65377078f4"
+    },
+    {
+      "bytes": 576,
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "elem_count": 144,
+      "fnv1a": "49832194e3e2f7c6",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "cf88545a31e4c5ae"
+    },
+    {
+      "bytes": 18432,
+      "dims": [
+        32,
+        144,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 4608,
+      "fnv1a": "44c1785e4d7f58aa",
+      "name": "mobilenetv20_features_linearbottleneck3_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "529ed47557f1b8e1"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "d41b71657b0f51db",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "f4734327b789fb75"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "bee6cf695bf862b4",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "53cd66fa019eaa4a"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "336bf2bf1ed9c0c6",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "4ac98d5526e8de2e"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "f22f4afb7cccc205",
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "e8423730f7febdec"
+    },
+    {
+      "bytes": 24576,
+      "dims": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 6144,
+      "fnv1a": "2b038b9b92c8c657",
+      "name": "mobilenetv20_features_linearbottleneck4_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "0920c09af1e9c97b"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "9b527137505bc5eb",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "d0f88f9b50442852"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "374a72d8e0bfeeaf",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "fe6d0a588f2304b6"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "66da22aba44cf9ee",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "71fde223b9ad4ed9"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "d7755ab834c25adc",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "6e90d0723d7e5f3b"
+    },
+    {
+      "bytes": 6912,
+      "dims": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 1728,
+      "fnv1a": "5c1817800b84f8d2",
+      "name": "mobilenetv20_features_linearbottleneck4_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "0c3aa13b24c3785b"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "af3147e134ddbaa9",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "87451db73f4cd6eb"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "fed602c3c309cac9",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "badb36d28c2fe3a3"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "a6ac7195166f7004",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "5951e7598ff5f2aa"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "b01b25e3e6334096",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "847512ace1fc2759"
+    },
+    {
+      "bytes": 24576,
+      "dims": [
+        32,
+        192,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 6144,
+      "fnv1a": "643d9063397307b5",
+      "name": "mobilenetv20_features_linearbottleneck4_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "9b980e928fadb45f"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "01d658ceaa079d4b",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "eb8e9795f4363de0"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "39dc21e6f56caa22",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "0a831992cb31454b"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "b78b94bf533e8898",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "ef985a0b23062f6c"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "90f9cf4ad41c42d2",
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "5b6626f1d5cda78d"
+    },
+    {
+      "bytes": 24576,
+      "dims": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 6144,
+      "fnv1a": "a0555e030364dec8",
+      "name": "mobilenetv20_features_linearbottleneck5_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "d595716abee1659d"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "565fb28fbbff52ea",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "2db5a7beadc42802"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "0f15fd4957b6383f",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "96104825abc4dde9"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "282d4f1828332c75",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "f5c602aabbdfe322"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "fdeee29a9ddb3545",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "8f97ccfed87fc1e7"
+    },
+    {
+      "bytes": 6912,
+      "dims": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 1728,
+      "fnv1a": "e2aaaa3cccf8e6fa",
+      "name": "mobilenetv20_features_linearbottleneck5_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "e8ac5cda23bca3fb"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "342b523046ba31ea",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "799b6702c1c27c42"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "6a12abef461d8c47",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "fdd323ed233a24b3"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "54b55a437afa45d4",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "4ce9476d49ff5a52"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "a6b5edcab17d720d",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "0d00a154fccebd10"
+    },
+    {
+      "bytes": 24576,
+      "dims": [
+        32,
+        192,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 6144,
+      "fnv1a": "87b2678d07865550",
+      "name": "mobilenetv20_features_linearbottleneck5_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "45b06ac529ac7acb"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "3db574d8bbb37809",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "069a2a05dddc515c"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "35085c5b83c9474c",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "dc451f7c9bd3c393"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "8141e3a7346cc730",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "90d47032f6a46bfe"
+    },
+    {
+      "bytes": 128,
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "elem_count": 32,
+      "fnv1a": "af45f7fdebb3f7bb",
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "f1a44625d6b53b5b"
+    },
+    {
+      "bytes": 24576,
+      "dims": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 6144,
+      "fnv1a": "0c288e33b6951345",
+      "name": "mobilenetv20_features_linearbottleneck6_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "0e63d0d91cbf8f59"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "5a439a7a124b24c4",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "48abc963945a2987"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "df920932f9de1901",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "93dfb9a9d8e7eb00"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "1fe987675496379a",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "7c21ee41ae1453e2"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "7c0b309a94bb3ee6",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "93557f408194b42b"
+    },
+    {
+      "bytes": 6912,
+      "dims": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 1728,
+      "fnv1a": "fcfdc22e2dd61b2e",
+      "name": "mobilenetv20_features_linearbottleneck6_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "1b100998c62cfdcd"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "7d4d11736c2f6ee5",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "ecddb3570ba7bb1d"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "0866072ed3e5de06",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "43bff34dde8c771e"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "27fddcf95b29b388",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "ab99b58580a9aff6"
+    },
+    {
+      "bytes": 768,
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "elem_count": 192,
+      "fnv1a": "a6bd71b081338bc3",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "19060d087bbcd748"
+    },
+    {
+      "bytes": 49152,
+      "dims": [
+        64,
+        192,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 12288,
+      "fnv1a": "b1627236deb89c29",
+      "name": "mobilenetv20_features_linearbottleneck6_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "0c08d1976827100c"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "3a2bcef7bdd374b1",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "bc27c8e02cca2943"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "7f63b87d6cac80d4",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "35c715398e0a8c1d"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "8451dbaf6a3523a4",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "c647e0499890d5d7"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "29aeb39839242096",
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "097e8c6eebf5cf36"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "69749e03cf1fcec9",
+      "name": "mobilenetv20_features_linearbottleneck7_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "4241346ac4f3e83c"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "eed5f806c3437a6e",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "64707a4ae986d453"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "103c57255ea30d07",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "7a14e274ce20d64b"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "c424c7282ee18315",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "c22421cb86b43a2e"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "603e1deef394992b",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "b1b15109f3ddc06f"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "d8e47b6771b272de",
+      "name": "mobilenetv20_features_linearbottleneck7_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "039025d71f8784c2"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "ab2e20f0e8d649d2",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "fa4e24bee66bddbe"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "1a550c83514cd558",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "c620d0d61be2d7b6"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "691510ff2f668c2b",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "a1aa196c7ae74246"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "ec48d084e94858c0",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "6bd4bd73d953ee29"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "df6eb6a1b1a4b3c5",
+      "name": "mobilenetv20_features_linearbottleneck7_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "7c3bac66233513e0"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "af1e4b706fe8e626",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "cf3215e861619f27"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "6e2b8034676dad8b",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "2cf5ad70c1842d40"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "99aa292a780eb18c",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "1cda478d24569443"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "d5d29a1dcd88da51",
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "22b16b0149f84280"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "9fd179119bba7bc0",
+      "name": "mobilenetv20_features_linearbottleneck8_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "0dc959d5e14b395c"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "07b187a01a0dab10",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "05f1e6a40221407a"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "3f34b31fa72fb297",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "296586c3d7ef7699"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "57ef9453a27e27b8",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "8deb76a3058e573b"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "d7f3f13fc23e72ef",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "bb268e03daf5f6f7"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "c049e271c5c9eb74",
+      "name": "mobilenetv20_features_linearbottleneck8_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "685aaa7cde175cc8"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "0f8e8e4dca3cc5b3",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "494970ad22f514e6"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "de1046fa0e3089ef",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "8cac0747a0b40788"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "fcc10d26a48b53b5",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "9df84417bd7ecf5e"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "3450a407e1e66ef2",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "537968247e028f7c"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "0a26d76dfec00672",
+      "name": "mobilenetv20_features_linearbottleneck8_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "19fb580b82c2018d"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "034af350833fa25e",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "55f88fa376bdeead"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "625d109bdbe36811",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "6e18d156ea584218"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "b8ebb739f17a45d8",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "b8e91c5d8fe9508d"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "29bdb0502624f846",
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "717ecb4bef0295ba"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "49992f352a773cc4",
+      "name": "mobilenetv20_features_linearbottleneck9_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "3d74b1900b0fd3d9"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "b150befd4f6a98b5",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "9f38e7aa9ffad216"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "f19f08dede105b77",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "160a23812975faf6"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "c0bea00eeab8feae",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "838e203a060cf236"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "e03aaa2e4ff9313b",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "7bc00f574a53a348"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "a271c097f730fe16",
+      "name": "mobilenetv20_features_linearbottleneck9_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "fa504fa38f3d7a38"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "56a96d00767915ff",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "3f19a7116759330b"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "8be0527c26163d13",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "323f15a63df94133"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "fb1ba1f519fb3397",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "e1db620be240c2bd"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "c080e2fefc79f1e2",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "545fc98d5bd1f3ef"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "3a322561e6b9feed",
+      "name": "mobilenetv20_features_linearbottleneck9_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "3d7687ba2fa3b1b9"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "c1bd3b992176d632",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "2e8ec09ed407f9e6"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "046412697279545d",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "a927d90b1fc07616"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "28354f1b9405ea49",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "71608b2d233b80c0"
+    },
+    {
+      "bytes": 256,
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "elem_count": 64,
+      "fnv1a": "504f824a775cb633",
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "a12bfd5e2ed5acb0"
+    },
+    {
+      "bytes": 98304,
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 24576,
+      "fnv1a": "74b9609c4196f063",
+      "name": "mobilenetv20_features_linearbottleneck10_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "5a7fecf6affe9128"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "13488d30dcbac3a5",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "03777e82c5dd8559"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "3e027f77d33e7f9a",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "1efee95776f6dc69"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "e779e683a8292043",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "a229425d14cd680d"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "0f66486d2e4c06ce",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "9e53c117d5b5d169"
+    },
+    {
+      "bytes": 13824,
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 3456,
+      "fnv1a": "77ab1e545bdc6fc2",
+      "name": "mobilenetv20_features_linearbottleneck10_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "e9d894fead51dcc2"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "720d0405a775bb3c",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "14cab5918776e29a"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "884d1b49eb0c33fd",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "2f729ed4582426f8"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "a1b4a49465b8a11c",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "65a6cbdac6cac674"
+    },
+    {
+      "bytes": 1536,
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "elem_count": 384,
+      "fnv1a": "5db413449f472172",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "6d920e91f5cd4abf"
+    },
+    {
+      "bytes": 147456,
+      "dims": [
+        96,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 36864,
+      "fnv1a": "5bff61264b2ef6e5",
+      "name": "mobilenetv20_features_linearbottleneck10_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "f577c342da669d79"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "d104556aa3a960b9",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "ef23f1c6e6cac4a0"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "b5c37e68e732335c",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "9ec116de05949f9e"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "1a265a5eda4cc9a1",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "66200e8cc6efc901"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "2cee57548b7c9685",
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "61fa117198869db2"
+    },
+    {
+      "bytes": 221184,
+      "dims": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 55296,
+      "fnv1a": "971a2ca67fd4e7d1",
+      "name": "mobilenetv20_features_linearbottleneck11_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "7c301e2d562e232f"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "d636ed661bba4fa2",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "d2cb6be777a455e0"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "af65fdb0d4a3b14e",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "d7a6852c73adabf0"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "6241ccc80b9b86a3",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "5830cad2a68aa380"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "8b8658c30f540b95",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "ba1ca3e607a45e66"
+    },
+    {
+      "bytes": 20736,
+      "dims": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 5184,
+      "fnv1a": "4be7d25c7a6e96ff",
+      "name": "mobilenetv20_features_linearbottleneck11_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "7f45201dd4939e56"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "cf68f9ce271685e6",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "3750c0e94efe9b7d"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "5f4c1402b5cfc09d",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "f7c03ac215043ddb"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "fdf46361ef174594",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "73fa1e164cf8b03d"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "29f2f49b0c20f76b",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "df56aad2c3698d71"
+    },
+    {
+      "bytes": 221184,
+      "dims": [
+        96,
+        576,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 55296,
+      "fnv1a": "8f50b228f1f72fcd",
+      "name": "mobilenetv20_features_linearbottleneck11_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "9b51397360e1a279"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "14a79da74735ae4a",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "34425279bd5e2cd4"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "bc4ff37504064c63",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "c40bbf27dd910a94"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "3c05086db5ff3f57",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "419bc3f1f083fd12"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "42e17b6d7c7f9a16",
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "15f51120fa50465f"
+    },
+    {
+      "bytes": 221184,
+      "dims": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 55296,
+      "fnv1a": "9d1e39296ca1154b",
+      "name": "mobilenetv20_features_linearbottleneck12_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "cdfc557d439e06ef"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "e413833b83a6effe",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "ce938a75e28eb985"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "d7ee58cf2369fd93",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "1f2df874915e88a7"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "16d97492dd3e7c00",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "bc12f575a55d7678"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "06f264db91d73c35",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "ee5ff6627234925d"
+    },
+    {
+      "bytes": 20736,
+      "dims": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 5184,
+      "fnv1a": "4bf50441398866f9",
+      "name": "mobilenetv20_features_linearbottleneck12_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "fe5c4708dbd3f4ad"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "172e05bc3e72fad9",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "e8ec77f3b3161c66"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "596aa3a932c56bf1",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "9b80e6fdcdb303f0"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "6e7bbe213f46ef37",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "0f3b2e038d64746e"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "60ae324ee8055558",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "9605801d4f3c8251"
+    },
+    {
+      "bytes": 221184,
+      "dims": [
+        96,
+        576,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 55296,
+      "fnv1a": "a9e4c4fb4c20d557",
+      "name": "mobilenetv20_features_linearbottleneck12_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "00c9fe61303d8f57"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "66cba08cf6ab7b92",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "e77cea0486d222ee"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "3faebd6184ec0fd7",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "786f919f528c18d7"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "70f0ac367608f817",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "c7f124e676adcc10"
+    },
+    {
+      "bytes": 384,
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "elem_count": 96,
+      "fnv1a": "9663721a00d0b43b",
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "fa55a539319b9b11"
+    },
+    {
+      "bytes": 221184,
+      "dims": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 55296,
+      "fnv1a": "b21e585864238948",
+      "name": "mobilenetv20_features_linearbottleneck13_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "a2c982e30ed3689b"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "8d09c2d48ccce557",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "ba7937baaf8896cf"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "c08fc3fa32c01eb4",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "905b7be6e27013f0"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "2a12dad35f304d9d",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "17a7e6fdf2dccb4d"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "aa83dc29f06b55b9",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "a166e6c678511b19"
+    },
+    {
+      "bytes": 20736,
+      "dims": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 5184,
+      "fnv1a": "54f5f3db345e6e8a",
+      "name": "mobilenetv20_features_linearbottleneck13_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "119647438bd4dc2e"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "4a1ddf8de3b1528e",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "13ed923d23d3815e"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "b65b7d887b5b570b",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "b744646d206a1260"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "de572c24be391a50",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "841e8181acaf5626"
+    },
+    {
+      "bytes": 2304,
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "elem_count": 576,
+      "fnv1a": "c203893526a25c9b",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "3e2aec1908e8c85c"
+    },
+    {
+      "bytes": 368640,
+      "dims": [
+        160,
+        576,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 92160,
+      "fnv1a": "262d75792e8286aa",
+      "name": "mobilenetv20_features_linearbottleneck13_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "ccc3ceeab251c221"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "d9bc2c2e8d91b8e3",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "4317c4a85a2aa3ed"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "c32782086c922ae6",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "42f8c2d530726fa9"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "b3d091add3428649",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "897b760fa9447c97"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "0118f91b5794c3b0",
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "02b4b591fbc229ab"
+    },
+    {
+      "bytes": 614400,
+      "dims": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 153600,
+      "fnv1a": "dbbd76ae1c8b910d",
+      "name": "mobilenetv20_features_linearbottleneck14_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "735c4f94523343e8"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "c38b1f81fd2ed97e",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "1a0f2dc0ddef5eb1"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "fa73662b0054af68",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "2a0ac54075ddb9b3"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "31e4d840e4c8cbd5",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "68f49fdb3c4d6052"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "c795d9626e9e24c8",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "db3d983dd0574f81"
+    },
+    {
+      "bytes": 34560,
+      "dims": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 8640,
+      "fnv1a": "6dc6c156f24b6bc1",
+      "name": "mobilenetv20_features_linearbottleneck14_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "fe38daf7f188f7ad"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "708112ed96b50375",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "2dfdf30435efe0af"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "092672bc82449eae",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "fc84e74600c0220a"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "f2f2984f21e2f2c4",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "90ab1df75edf35bc"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "12b7f68c0b0506a2",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "5966dc53c6b1647a"
+    },
+    {
+      "bytes": 614400,
+      "dims": [
+        160,
+        960,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 153600,
+      "fnv1a": "65555445fe6b76d2",
+      "name": "mobilenetv20_features_linearbottleneck14_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "90531640a3119db2"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "132d58e1ec93218a",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "8e1ec10e69adcd95"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "0c4e121cf14b3bf6",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "4506dabc07723062"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "79b777a59790cf76",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "c7ba35f1a863778a"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "a92795490873b2cc",
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "785e808d155b3098"
+    },
+    {
+      "bytes": 614400,
+      "dims": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 153600,
+      "fnv1a": "cdcd13355b58993d",
+      "name": "mobilenetv20_features_linearbottleneck15_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "284601e85baea8bb"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "1617a5e93652a0c6",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "6ec833b7bbed9ff3"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "86ba8c08697f35d1",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "e01b2a5165d854d6"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "90977fd6a0339eff",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "09c246a8493e76d2"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "d25aa91682acedb9",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "ead9b1d36de253da"
+    },
+    {
+      "bytes": 34560,
+      "dims": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 8640,
+      "fnv1a": "dbe68637c490f842",
+      "name": "mobilenetv20_features_linearbottleneck15_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "17571be4e24e9c48"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "179b64b4d633c37b",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "188c9d107475c3d8"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "69d7b976fff63f1b",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "b9886b1a8d2a88bf"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "8bfc9696e8058a12",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "e4631d5e8f24ad66"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "98bc732c59627ee0",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "3e163005d322a6cf"
+    },
+    {
+      "bytes": 614400,
+      "dims": [
+        160,
+        960,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 153600,
+      "fnv1a": "a0ab770f36d7db36",
+      "name": "mobilenetv20_features_linearbottleneck15_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "e0dc8743e45a1051"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "9a33f6b830697518",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "89bf84246f78d9c5"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "eed240a3acad7bfa",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "c3d6b2bc13aa25a9"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "1ab9ee0dffbc8a1b",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "8c93a18d99d85785"
+    },
+    {
+      "bytes": 640,
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "elem_count": 160,
+      "fnv1a": "30aa03a3ee02233a",
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "c9a499da71d796ba"
+    },
+    {
+      "bytes": 614400,
+      "dims": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 153600,
+      "fnv1a": "0a10a6652ccf863e",
+      "name": "mobilenetv20_features_linearbottleneck16_conv0_weight",
+      "numpy_dtype": "float32",
+      "sha256": "7b2c0a6074936652"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "d8cf5ec7c13a6957",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "863a2453a79f1532"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "95af1404b82752af",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_beta",
+      "numpy_dtype": "float32",
+      "sha256": "7ef1ad46fe21c90e"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "f711061e4954ee04",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "e4fdfe741bed3b7f"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "09912014cec0929d",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "6d774540560f2840"
+    },
+    {
+      "bytes": 34560,
+      "dims": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "elem_count": 8640,
+      "fnv1a": "cd0a4b0eeedfd3dd",
+      "name": "mobilenetv20_features_linearbottleneck16_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "9a8ff3185d125cca"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "a7487775e8062c22",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "856f9fe447700622"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "c8621bca811985fb",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "0a5df36f4ab8fc6e"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "62c4ee4e5d93eb99",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "3ab77dbbfbea3425"
+    },
+    {
+      "bytes": 3840,
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "elem_count": 960,
+      "fnv1a": "fb8d5fb728cbb627",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "a92e7dafd9d05dc2"
+    },
+    {
+      "bytes": 1228800,
+      "dims": [
+        320,
+        960,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 307200,
+      "fnv1a": "0436543a7ac1ddf7",
+      "name": "mobilenetv20_features_linearbottleneck16_conv2_weight",
+      "numpy_dtype": "float32",
+      "sha256": "cae05ff1195e59f7"
+    },
+    {
+      "bytes": 1280,
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "elem_count": 320,
+      "fnv1a": "177da9b74ff27dbf",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "9d55300f0d9e9b75"
+    },
+    {
+      "bytes": 1280,
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "elem_count": 320,
+      "fnv1a": "794d87e8a0a3b795",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_beta",
+      "numpy_dtype": "float32",
+      "sha256": "898a7a7045d1128e"
+    },
+    {
+      "bytes": 1280,
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "elem_count": 320,
+      "fnv1a": "d7e658f4bdff504a",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "11ebd4492e855bd6"
+    },
+    {
+      "bytes": 1280,
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "elem_count": 320,
+      "fnv1a": "1172607f6863ac2f",
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "e49402039a6d11a4"
+    },
+    {
+      "bytes": 1638400,
+      "dims": [
+        1280,
+        320,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 409600,
+      "fnv1a": "35923891c67acc7a",
+      "name": "mobilenetv20_features_conv1_weight",
+      "numpy_dtype": "float32",
+      "sha256": "50e82bde58c50a37"
+    },
+    {
+      "bytes": 5120,
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "elem_count": 1280,
+      "fnv1a": "3f1b21df71278667",
+      "name": "mobilenetv20_features_batchnorm1_gamma",
+      "numpy_dtype": "float32",
+      "sha256": "0ceee33b6fcfe757"
+    },
+    {
+      "bytes": 5120,
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "elem_count": 1280,
+      "fnv1a": "cfcd8a996433d4b7",
+      "name": "mobilenetv20_features_batchnorm1_beta",
+      "numpy_dtype": "float32",
+      "sha256": "a42c3364cfb22871"
+    },
+    {
+      "bytes": 5120,
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "elem_count": 1280,
+      "fnv1a": "9d06cf75f3926b89",
+      "name": "mobilenetv20_features_batchnorm1_running_mean",
+      "numpy_dtype": "float32",
+      "sha256": "b9df3b378f92c56b"
+    },
+    {
+      "bytes": 5120,
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "elem_count": 1280,
+      "fnv1a": "826f79ea250e7402",
+      "name": "mobilenetv20_features_batchnorm1_running_var",
+      "numpy_dtype": "float32",
+      "sha256": "d8963b6d7f8d0c92"
+    },
+    {
+      "bytes": 5120000,
+      "dims": [
+        1000,
+        1280,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "elem_count": 1280000,
+      "fnv1a": "c347a34e5ed25b00",
+      "name": "mobilenetv20_output_pred_weight",
+      "numpy_dtype": "float32",
+      "sha256": "05df04ec4ac42b6f"
+    },
+    {
+      "bytes": 16,
+      "dims": [
+        2
+      ],
+      "dtype": 7,
+      "elem_count": 2,
+      "fnv1a": "821e65573beff6dd",
+      "name": "reshape_attr_tensor421",
+      "numpy_dtype": "int64",
+      "sha256": "787979ee6a78d79a"
+    }
+  ],
+  "inputs": [
+    {
+      "dims": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "dtype": 1,
+      "name": "data"
+    },
+    {
+      "dims": [
+        32,
+        3,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_conv0_weight"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        32,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_conv0_weight"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        32,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_conv1_weight"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_conv2_weight"
+    },
+    {
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        16
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        96,
+        16,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_conv0_weight"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        96,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_conv1_weight"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        24,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_conv2_weight"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        144,
+        24,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_conv0_weight"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        144,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_conv1_weight"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        24,
+        144,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_conv2_weight"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        24
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        144,
+        24,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_conv0_weight"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        144,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_conv1_weight"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        144
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        32,
+        144,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_conv2_weight"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_conv0_weight"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_conv1_weight"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        32,
+        192,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_conv2_weight"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_conv0_weight"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_conv1_weight"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        32,
+        192,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_conv2_weight"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        32
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_conv0_weight"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_conv1_weight"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        192
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        64,
+        192,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_conv2_weight"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_conv0_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_conv1_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_conv2_weight"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_conv0_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_conv1_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_conv2_weight"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_conv0_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_conv1_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_conv2_weight"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        64
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_conv0_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_conv1_weight"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        384
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        96,
+        384,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_conv2_weight"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_conv0_weight"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_conv1_weight"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        96,
+        576,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_conv2_weight"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_conv0_weight"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_conv1_weight"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        96,
+        576,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_conv2_weight"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        96
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_conv0_weight"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_conv1_weight"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        576
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        160,
+        576,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_conv2_weight"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_conv0_weight"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_conv1_weight"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        160,
+        960,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_conv2_weight"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_conv0_weight"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_conv1_weight"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        160,
+        960,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_conv2_weight"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        160
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_conv0_weight"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_gamma"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_beta"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_running_mean"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_running_var"
+    },
+    {
+      "dims": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_conv1_weight"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        960
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        320,
+        960,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_conv2_weight"
+    },
+    {
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_gamma"
+    },
+    {
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_beta"
+    },
+    {
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_running_mean"
+    },
+    {
+      "dims": [
+        320
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_running_var"
+    },
+    {
+      "dims": [
+        1280,
+        320,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_conv1_weight"
+    },
+    {
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm1_gamma"
+    },
+    {
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm1_beta"
+    },
+    {
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm1_running_mean"
+    },
+    {
+      "dims": [
+        1280
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_features_batchnorm1_running_var"
+    },
+    {
+      "dims": [
+        1000,
+        1280,
+        1,
+        1
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_output_pred_weight"
+    },
+    {
+      "dims": [
+        2
+      ],
+      "dtype": 7,
+      "name": "reshape_attr_tensor421"
+    }
+  ],
+  "model": {
+    "domain": "",
+    "ir_version": 3,
+    "model_version": 0,
+    "producer_name": "",
+    "producer_version": ""
+  },
+  "nodes": [
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck0_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck0_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck0_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck0_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck0_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck1_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck1_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck1_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck1_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck1_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck2_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck2_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck2_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck2_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck2_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck2_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck3_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck3_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck3_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck3_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck3_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck4_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck4_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck4_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck4_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck4_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck4_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck5_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck5_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck5_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck5_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck5_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck5_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck6_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck6_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck6_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck6_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck6_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck7_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck7_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck7_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck7_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck7_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck7_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck8_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck8_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck8_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck8_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck8_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck8_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck9_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck9_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck9_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck9_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck9_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck9_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck10_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck10_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck10_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck10_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck10_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck11_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck11_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck11_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck11_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck11_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck11_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck12_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck12_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck12_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck12_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck12_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck12_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck13_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck13_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck13_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck13_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck13_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck14_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck14_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck14_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck14_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck14_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck14_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck15_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck15_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck15_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck15_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck15_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck15_elemwise_add0",
+      "op_type": "Add",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck16_conv0_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm0_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_relu0_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck16_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_linearbottleneck16_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_linearbottleneck16_conv2_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_linearbottleneck16_batchnorm2_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_features_conv1_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 5,
+      "name": "mobilenetv20_features_batchnorm1_fwd",
+      "op_type": "BatchNormalization",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_relu1_fwd",
+      "op_type": "Relu",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 1,
+      "name": "mobilenetv20_features_pool0_fwd",
+      "op_type": "GlobalAveragePool",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_output_pred_fwd",
+      "op_type": "Conv",
+      "output_count": 1
+    },
+    {
+      "domain": "",
+      "input_count": 2,
+      "name": "mobilenetv20_output_flatten0_reshape0",
+      "op_type": "Reshape",
+      "output_count": 1
+    }
+  ],
+  "opset": [
+    {
+      "domain": "",
+      "version": 7
+    }
+  ],
+  "outputs": [
+    {
+      "dims": [
+        1,
+        1000
+      ],
+      "dtype": 1,
+      "name": "mobilenetv20_output_flatten0_reshape0"
+    }
+  ]
+}

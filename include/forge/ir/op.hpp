@@ -26,10 +26,10 @@ enum class OpType {
     BatchNorm, LayerNorm,
 
     // ---- Pooling ----
-    MaxPool, AvgPool,
+    MaxPool, AvgPool, GlobalAvgPool,
 
     // ---- Shape ----
-    Reshape, Transpose, Concat,
+    Reshape, Transpose, Concat, Flatten,
 
     // ---- Special ----
     Constant,

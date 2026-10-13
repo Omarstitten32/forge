@@ -1,0 +1,32 @@
+Forge - AI model compiler for ARM64 
+
+USAGE:  forge [OPTIONS] <model.onnx>
+
+
+POSITIONALS:
+  input TEXT REQUIRED         Input model file (.onnx) 
+
+OPTIONS:
+  -h,     --help              Print this help message and exit 
+          --version           Display program version information and exit 
+  -o,     --output TEXT       Output file 
+  -b,     --backend TEXT:{neon,sve,apu,vulkan} 
+                              Backend: neon|sve|apu|vulkan 
+          --verify-tensors    Print per-tensor metadata + FNV-1a hash (for validation) 
+
+EXAMPLES: 
+forge model.onnx Analyze with default backend 
+forge model.onnx --backend=neon Use ARM NEON (SIMD) 
+forge model.onnx --backend=sve Use ARM SVE/SVE2 
+forge model.onnx --backend=apu Use MediaTek APU 
+forge model.onnx --backend=vulkan Use Mali GPU 
+forge model.onnx -o generated.c Save generated code 
+
+SUPPORTED FORMATS: 
+.onnx ONNX models (Opset 7 through 17+) 
+
+EXIT CODES: 
+0 Success 
+1 Invalid model or parse error 
+2 Unexpected runtime error 
+

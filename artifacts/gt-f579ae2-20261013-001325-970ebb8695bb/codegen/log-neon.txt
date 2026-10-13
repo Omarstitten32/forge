@@ -1,0 +1,23 @@
+[00:14:23.288] [info] Forge v0.1.0
+[00:14:23.288] [info] Input:   /root/external_test/test_model.onnx
+[00:14:23.288] [info] Backend: neon
+[00:14:23.288] [info] 
+[00:14:23.288] [info] ═══════ ONNX Metadata ═══════
+[00:14:23.288] [info]   Producer   : forge-test 0.1.0
+[00:14:23.288] [info]   IR version : 10
+[00:14:23.288] [info]   Opset      : 17
+[00:14:23.288] [info]   Nodes      : 5
+[00:14:23.288] [info]   Initializers: 4
+[00:14:23.288] [info]   Inputs     : 1
+[00:14:23.288] [info]   Outputs    : 1
+[00:14:23.288] [info] 
+[00:14:23.288] [info] ═══════ IR Graph ═══════
+[00:14:23.288] [info]   Graph: 5 nodes, 10 tensors (4 with data)
+[00:14:23.288] [info]     - conv_w : f32 [8, 3, 3, 3] (864 bytes)
+[00:14:23.288] [info]     - conv_b : f32 [8] (32 bytes)
+[00:14:23.288] [info]     - gemm_w : f32 [1800, 10] (72000 bytes)
+[00:14:23.288] [info]     - gemm_b : f32 [10] (40 bytes)
+[00:14:23.288] [info] 
+[00:14:23.288] [info] Optimization: 5 -> 4 nodes
+[00:14:23.288] [info] Generated 601 bytes of code
+[00:14:23.288] [info] Written to /root/forge/artifacts/gt-f579ae2-20261013-001325-970ebb8695bb/codegen/out-neon.c

@@ -1,0 +1,5 @@
+[00:14:18.473] [info] Forge v0.1.0
+[00:14:18.473] [info] Input:   /root/forge/artifacts/gt-f579ae2-20261013-001325-970ebb8695bb/raw/empty.onnx
+[00:14:18.473] [info] Backend: neon
+[00:14:18.473] [info] 
+[00:14:18.473] [error] ParseError: File is empty: /root/forge/artifacts/gt-f579ae2-20261013-001325-970ebb8695bb/raw/empty.onnx

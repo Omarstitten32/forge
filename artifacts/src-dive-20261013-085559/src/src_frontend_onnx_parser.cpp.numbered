@@ -1,0 +1,338 @@
+     1	#include "forge/frontend/onnx_parser.hpp"
+     2	#include "forge/core/error.hpp"
+     3	
+     4	#include <cstring>
+     5	#include <fstream>
+     6	#include <sstream>
+     7	#include <unordered_map>
+     8	
+     9	#include "onnx.pb.h"
+    10	
+    11	namespace forge::frontend {
+    12	
+    13	// ==========================================================
+    14	// Internal helpers
+    15	// ==========================================================
+    16	namespace {
+    17	
+    18	ir::DataType convert_dtype(int onnx_dtype) {
+    19	    switch (onnx_dtype) {
+    20	        case onnx::TensorProto_DataType_FLOAT:   return ir::DataType::F32;
+    21	        case onnx::TensorProto_DataType_FLOAT16: return ir::DataType::F16;
+    22	        case onnx::TensorProto_DataType_BFLOAT16:return ir::DataType::BF16;
+    23	        case onnx::TensorProto_DataType_INT8:    return ir::DataType::I8;
+    24	        case onnx::TensorProto_DataType_INT16:   return ir::DataType::I16;
+    25	        case onnx::TensorProto_DataType_INT32:   return ir::DataType::I32;
+    26	        case onnx::TensorProto_DataType_INT64:   return ir::DataType::I64;
+    27	        case onnx::TensorProto_DataType_UINT8:   return ir::DataType::U8;
+    28	        default:                                  return ir::DataType::Unknown;
+    29	    }
+    30	}
+    31	
+    32	ir::OpType convert_op(const std::string& op_type) {
+    33	    static const std::unordered_map<std::string, ir::OpType> MAP = {
+    34	        {"Add",       ir::OpType::Add},
+    35	        {"Sub",       ir::OpType::Sub},
+    36	        {"Mul",       ir::OpType::Mul},
+    37	        {"Div",       ir::OpType::Div},
+    38	        {"MatMul",    ir::OpType::MatMul},
+    39	        {"Gemm",      ir::OpType::Gemm},
+    40	        {"Conv",      ir::OpType::Conv2D},
+    41	        {"Relu",      ir::OpType::Relu},
+    42	        {"Sigmoid",   ir::OpType::Sigmoid},
+    43	        {"Tanh",      ir::OpType::Tanh},
+    44	        {"Softmax",   ir::OpType::Softmax},
+    45	        {"Gelu",      ir::OpType::Gelu},
+    46	        {"BatchNormalization",  ir::OpType::BatchNorm},
+    47	        {"LayerNormalization",  ir::OpType::LayerNorm},
+    48	        {"MaxPool",   ir::OpType::MaxPool},
+    49	        {"AveragePool", ir::OpType::AvgPool},
+    50	        {"Reshape",   ir::OpType::Reshape},
+    51	        {"Transpose", ir::OpType::Transpose},
+    52	        {"Concat",    ir::OpType::Concat},
+    53	        {"Constant",  ir::OpType::Constant},
+    54	    };
+    55	    auto it = MAP.find(op_type);
+    56	    return it != MAP.end() ? it->second : ir::OpType::Unknown;
+    57	}
+    58	
+    59	void convert_attributes(const onnx::NodeProto& onnx_node, ir::Node& node) {
+    60	    for (const auto& attr : onnx_node.attribute()) {
+    61	        const auto& name = attr.name();
+    62	        switch (attr.type()) {
+    63	            case onnx::AttributeProto_AttributeType_INT:
+    64	                node.attrs[name] = static_cast<std::int64_t>(attr.i());
+    65	                break;
+    66	            case onnx::AttributeProto_AttributeType_FLOAT:
+    67	                node.attrs[name] = static_cast<double>(attr.f());
+    68	                break;
+    69	            case onnx::AttributeProto_AttributeType_STRING:
+    70	                node.attrs[name] = attr.s();
+    71	                break;
+    72	            case onnx::AttributeProto_AttributeType_INTS: {
+    73	                std::vector<std::int64_t> v;
+    74	                v.reserve(attr.ints_size());
+    75	                for (int i = 0; i < attr.ints_size(); ++i)
+    76	                    v.push_back(static_cast<std::int64_t>(attr.ints(i)));
+    77	                node.attrs[name] = std::move(v);
+    78	                break;
+    79	            }
+    80	            case onnx::AttributeProto_AttributeType_FLOATS: {
+    81	                std::vector<double> v;
+    82	                v.reserve(attr.floats_size());
+    83	                for (int i = 0; i < attr.floats_size(); ++i)
+    84	                    v.push_back(static_cast<double>(attr.floats(i)));
+    85	                node.attrs[name] = std::move(v);
+    86	                break;
+    87	            }
+    88	            default: break;
+    89	        }
+    90	    }
+    91	}
+    92	
+    93	ir::TensorInfo extract_tensor_info(const onnx::ValueInfoProto& vi) {
+    94	    ir::TensorInfo info;
+    95	    info.name = vi.name();
+    96	
+    97	    if (!vi.has_type()) return info;
+    98	    const auto& type = vi.type();
+    99	    if (!type.has_tensor_type()) return info;
+   100	
+   101	    const auto& tt = type.tensor_type();
+   102	    info.dtype = convert_dtype(tt.elem_type());
+   103	
+   104	    if (tt.has_shape()) {
+   105	        const auto& shape = tt.shape();
+   106	        for (int i = 0; i < shape.dim_size(); ++i) {
+   107	            const auto& d = shape.dim(i);
+   108	            int64_t dim_value = 0;
+   109	            if (d.has_dim_value()) {
+   110	                dim_value = d.dim_value();
+   111	            } else if (d.has_dim_param()) {
+   112	                dim_value = -1;
+   113	            }
+   114	            info.shape.dims.push_back(dim_value);
+   115	        }
+   116	    }
+   117	    return info;
+   118	}
+   119	
+   120	// ==========================================================
+   121	// Data extraction — NEW
+   122	// ==========================================================
+   123	std::vector<std::uint8_t> extract_raw_data(const onnx::TensorProto& t) {
+   124	    std::vector<std::uint8_t> out;
+   125	
+   126	    // Case 1: raw_data provided (most common — pre-serialized bytes)
+   127	    if (!t.raw_data().empty()) {
+   128	        const auto& raw = t.raw_data();
+   129	        out.assign(raw.begin(), raw.end());
+   130	        return out;
+   131	    }
+   132	
+   133	    // Case 2: typed arrays (older exporters)
+   134	    ir::DataType dtype = convert_dtype(t.data_type());
+   135	
+   136	    std::size_t n = 1;
+   137	    for (int i = 0; i < t.dims_size(); ++i) {
+   138	        n *= static_cast<std::size_t>(t.dims(i));
+   139	    }
+   140	    if (n == 0) return out;
+   141	
+   142	    switch (dtype) {
+   143	        case ir::DataType::F32: {
+   144	            out.resize(n * 4);
+   145	            for (std::size_t i = 0; i < n && i < (std::size_t)t.float_data_size(); ++i) {
+   146	                float v = t.float_data(static_cast<int>(i));
+   147	                std::memcpy(out.data() + i * 4, &v, 4);
+   148	            }
+   149	            break;
+   150	        }
+   151	        case ir::DataType::I32: {
+   152	            out.resize(n * 4);
+   153	            for (std::size_t i = 0; i < n && i < (std::size_t)t.int32_data_size(); ++i) {
+   154	                int32_t v = t.int32_data(static_cast<int>(i));
+   155	                std::memcpy(out.data() + i * 4, &v, 4);
+   156	            }
+   157	            break;
+   158	        }
+   159	        case ir::DataType::I64: {
+   160	            out.resize(n * 8);
+   161	            for (std::size_t i = 0; i < n && i < (std::size_t)t.int64_data_size(); ++i) {
+   162	                int64_t v = t.int64_data(static_cast<int>(i));
+   163	                std::memcpy(out.data() + i * 8, &v, 8);
+   164	            }
+   165	            break;
+   166	        }
+   167	        case ir::DataType::I8: {
+   168	            out.resize(n);
+   169	            for (std::size_t i = 0; i < n && i < (std::size_t)t.int32_data_size(); ++i) {
+   170	                out[i] = static_cast<std::uint8_t>(t.int32_data(static_cast<int>(i)));
+   171	            }
+   172	            break;
+   173	        }
+   174	        case ir::DataType::U8: {
+   175	            out.resize(n);
+   176	            for (std::size_t i = 0; i < n && i < (std::size_t)t.uint64_data_size(); ++i) {
+   177	                out[i] = static_cast<std::uint8_t>(t.uint64_data(static_cast<int>(i)));
+   178	            }
+   179	            break;
+   180	        }
+   181	        default:
+   182	            // Unsupported type — leave data empty
+   183	            break;
+   184	    }
+   185	
+   186	    return out;
+   187	}
+   188	
+   189	ir::Tensor extract_initializer_tensor(const onnx::TensorProto& t) {
+   190	    ir::TensorInfo info;
+   191	    info.name  = t.name();
+   192	    info.dtype = convert_dtype(t.data_type());
+   193	    for (int i = 0; i < t.dims_size(); ++i) {
+   194	        info.shape.dims.push_back(t.dims(i));
+   195	    }
+   196	    auto raw = extract_raw_data(t);
+   197	    return ir::Tensor(std::move(info), std::move(raw));
+   198	}
+   199	
+   200	std::size_t extract_opset(const onnx::ModelProto& model) {
+   201	    std::size_t v = 0;
+   202	    for (int i = 0; i < model.opset_import_size(); ++i) {
+   203	        auto cur = static_cast<std::size_t>(model.opset_import(i).version());
+   204	        if (cur > v) v = cur;
+   205	    }
+   206	    return v;
+   207	}
+   208	
+   209	} // anonymous namespace
+   210	
+   211	// ==========================================================
+   212	// Public API
+   213	// ==========================================================
+   214	
+   215	OnnxParseResult parse_onnx_bytes(const std::vector<std::uint8_t>& data) {
+   216	    if (data.empty()) {
+   217	        throw ParseError("Empty ONNX buffer");
+   218	    }
+   219	
+   220	    onnx::ModelProto model;
+   221	    if (!model.ParseFromArray(data.data(), static_cast<int>(data.size()))) {
+   222	        throw ParseError("Failed to deserialize ONNX ModelProto (invalid binary)");
+   223	    }
+   224	
+   225	    if (!model.has_graph()) {
+   226	        throw ParseError("ONNX ModelProto has no GraphProto");
+   227	    }
+   228	
+   229	    const auto& g = model.graph();
+   230	
+   231	    OnnxParseResult result;
+   232	    auto& graph    = result.graph;
+   233	    auto& metadata = result.metadata;
+   234	
+   235	    metadata.producer_name     = model.producer_name();
+   236	    metadata.producer_version  = model.producer_version();
+   237	    metadata.domain            = model.domain();
+   238	    metadata.model_version     = model.model_version();
+   239	    metadata.ir_version        = model.ir_version();
+   240	    metadata.doc_string        = model.doc_string();
+   241	    metadata.opset_version     = extract_opset(model);
+   242	    metadata.node_count        = static_cast<std::size_t>(g.node_size());
+   243	    metadata.initializer_count = static_cast<std::size_t>(g.initializer_size());
+   244	    metadata.input_count       = static_cast<std::size_t>(g.input_size());
+   245	    metadata.output_count      = static_cast<std::size_t>(g.output_size());
+   246	
+   247	    std::unordered_map<std::string, std::uint32_t> tensor_ids;
+   248	
+   249	    auto register_info = [&](ir::TensorInfo info) -> std::uint32_t {
+   250	        auto id = graph.add_tensor(std::move(info));
+   251	        tensor_ids[graph.tensor(id)->name] = id;
+   252	        return id;
+   253	    };
+   254	
+   255	    auto register_tensor = [&](ir::Tensor t) -> std::uint32_t {
+   256	        auto name = t.name();
+   257	        auto id = graph.add_tensor(std::move(t));
+   258	        tensor_ids[name] = id;
+   259	        return id;
+   260	    };
+   261	
+   262	    // 1. Register initializers WITH DATA FIRST
+   263	    //    (Opset 7 lists weights as inputs — initializers must win)
+   264	    for (int i = 0; i < g.initializer_size(); ++i) {
+   265	        auto t = extract_initializer_tensor(g.initializer(i));
+   266	        if (tensor_ids.count(t.name())) continue;
+   267	        register_tensor(std::move(t));
+   268	    }
+   269	
+   270	    // 2. Register graph inputs (metadata only, skip if already registered)
+   271	    for (int i = 0; i < g.input_size(); ++i) {
+   272	        auto info = extract_tensor_info(g.input(i));
+   273	        if (tensor_ids.count(info.name)) continue;
+   274	        register_info(std::move(info));
+   275	    }
+   276	
+   277	    // 3. Register graph outputs
+   278	    for (int i = 0; i < g.output_size(); ++i) {
+   279	        auto info = extract_tensor_info(g.output(i));
+   280	        if (tensor_ids.count(info.name)) continue;
+   281	        register_info(std::move(info));
+   282	    }
+   283	
+   284	    // 4. Create nodes
+   285	    for (int i = 0; i < g.node_size(); ++i) {
+   286	        const auto& onnx_node = g.node(i);
+   287	
+   288	        ir::OpType op = convert_op(onnx_node.op_type());
+   289	        std::string name = onnx_node.name().empty()
+   290	            ? (onnx_node.op_type() + "_" + std::to_string(i))
+   291	            : onnx_node.name();
+   292	
+   293	        auto node_id = graph.add_node(op, name);
+   294	        auto* node   = graph.node(node_id);
+   295	
+   296	        convert_attributes(onnx_node, *node);
+   297	
+   298	        auto ensure_tensor = [&](const std::string& tname) -> std::uint32_t {
+   299	            auto it = tensor_ids.find(tname);
+   300	            if (it != tensor_ids.end()) return it->second;
+   301	            ir::TensorInfo info;
+   302	            info.name = tname;
+   303	            info.dtype = ir::DataType::Unknown;
+   304	            return register_info(std::move(info));
+   305	        };
+   306	
+   307	        for (int j = 0; j < onnx_node.input_size(); ++j)
+   308	            node->inputs.push_back(ensure_tensor(onnx_node.input(j)));
+   309	        for (int j = 0; j < onnx_node.output_size(); ++j)
+   310	            node->outputs.push_back(ensure_tensor(onnx_node.output(j)));
+   311	    }
+   312	
+   313	    return result;
+   314	}
+   315	
+   316	OnnxParseResult parse_onnx(const std::filesystem::path& path) {
+   317	    std::ifstream in(path, std::ios::binary);
+   318	    if (!in) {
+   319	        throw ParseError("Cannot open file: " + path.string());
+   320	    }
+   321	
+   322	    in.seekg(0, std::ios::end);
+   323	    auto size = in.tellg();
+   324	    in.seekg(0, std::ios::beg);
+   325	
+   326	    if (size <= 0) {
+   327	        throw ParseError("File is empty: " + path.string());
+   328	    }
+   329	
+   330	    std::vector<std::uint8_t> buffer(static_cast<std::size_t>(size));
+   331	    if (!in.read(reinterpret_cast<char*>(buffer.data()), size)) {
+   332	        throw ParseError("Failed to read: " + path.string());
+   333	    }
+   334	
+   335	    return parse_onnx_bytes(buffer);
+   336	}
+   337	
+   338	} // namespace forge::frontend

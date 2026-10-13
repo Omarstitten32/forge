@@ -1,0 +1,4 @@
+Benchmark 1: /root/forge/build-truth/forge /root/external_test/mobilenetv2-7.onnx
+  Time (mean ± σ):      55.3 ms ±   8.2 ms    [User: 17.7 ms, System: 32.1 ms]
+  Range (min … max):    44.3 ms …  81.2 ms    30 runs
+ 

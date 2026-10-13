@@ -1,0 +1,68 @@
+=== FNV implementation in main.cpp ===
+16:// FNV-1a 64-bit hash (for tensor verification)
+18:static std::uint64_t fnv1a_64(const std::uint8_t* data, std::size_t len) {
+19:    std::uint64_t h = 0xcbf29ce484222325ULL;
+22:        h *= 0x100000001b3ULL;
+62:        "Print per-tensor metadata + FNV-1a hash (for validation)");
+95:                    h = fnv1a_64(t.data(), t.byte_size());
+101:                // Format: name | dtype | rank | dims | bytes | hash
+
+=== context lines around fnv ===
+
+// ==========================================================
+// FNV-1a 64-bit hash (for tensor verification)
+// ==========================================================
+static std::uint64_t fnv1a_64(const std::uint8_t* data, std::size_t len) {
+    std::uint64_t h = 0xcbf29ce484222325ULL;
+    for (std::size_t i = 0; i < len; ++i) {
+        h ^= static_cast<std::uint64_t>(data[i]);
+        h *= 0x100000001b3ULL;
+    }
+    return h;
+}
+
+int main(int argc, char** argv) {
+    forge::init_logging();
+
+    CLI::App app{"Forge - AI model compiler for ARM64"};
+    app.set_version_flag("--version", "Forge v0.1.0 (aarch64)");
+    app.usage("USAGE:  forge [OPTIONS] <model.onnx>");
+    app.footer(
+--
+    bool verify_tensors = false;
+    app.add_flag("--verify-tensors", verify_tensors,
+        "Print per-tensor metadata + FNV-1a hash (for validation)");
+
+    CLI11_PARSE(app, argc, argv);
+
+    spdlog::info("Forge v0.1.0");
+    spdlog::info("Input:   {}", input);
+    spdlog::info("Backend: {}", backend);
+    spdlog::info("");
+
+    try {
+        auto result = forge::frontend::parse_onnx(input);
+        const auto& m = result.metadata;
+
+        // Metadata report
+        spdlog::info("═══════ ONNX Metadata ═══════");
+        spdlog::info("  Producer   : {} {}", m.producer_name, m.producer_version);
+--
+                std::uint64_t h = 0;
+                if (t.has_data()) {
+                    h = fnv1a_64(t.data(), t.byte_size());
+                }
+                char buf[32];
+                std::snprintf(buf, sizeof(buf), "%016llx",
+                              (unsigned long long)h);
+
+                // Format: name | dtype | rank | dims | bytes | hash
+                std::ostringstream line;
+                line << "TENSOR|" << t.name() << "|"
+                     << forge::ir::dtype_name(t.dtype()) << "|";
+                for (std::size_t i = 0; i < t.shape().dims.size(); ++i) {
+                    if (i) line << ",";
+                    line << t.shape().dims[i];
+                }
+                line << "|" << t.byte_size()
+                     << "|" << buf;
